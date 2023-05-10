@@ -4,7 +4,6 @@ import com.vodafone.model.Card;
 import com.vodafone.repository.CardRepo;
 import lombok.RequiredArgsConstructor;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
 
 @RequiredArgsConstructor

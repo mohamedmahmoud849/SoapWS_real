@@ -4,7 +4,6 @@ import com.vodafone.handler.*;
 import com.vodafone.model.Card;
 import com.vodafone.repository.CardRepo;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class CardService {

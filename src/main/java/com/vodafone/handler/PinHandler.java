@@ -4,8 +4,6 @@ import com.vodafone.model.Card;
 import com.vodafone.repository.CardRepo;
 import lombok.RequiredArgsConstructor;
 
-import java.sql.SQLException;
-
 @RequiredArgsConstructor
 public class PinHandler extends Handler{
     private final CardRepo cardRepo;

@@ -2,8 +2,6 @@ package com.vodafone.handler;
 
 import com.vodafone.model.Card;
 
-import java.sql.SQLException;
-
 public abstract class Handler {
     private Handler next;
 
