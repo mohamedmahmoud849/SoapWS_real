@@ -1,11 +1,9 @@
 package com.vodafone;
 
-import com.vodafone.model.Card;
 import com.vodafone.service.CardService;
 import lombok.RequiredArgsConstructor;
 
 import javax.jws.WebService;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -21,7 +19,7 @@ public class HelloWorldImpl implements HelloWorld{
     }
 
     @Override
-    public boolean validateCard(long cardNumber, int pin, String expireDate) {
+    public String validateCard(long cardNumber, int pin, String expireDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         formatter = formatter.withLocale(Locale.ENGLISH);
         LocalDate date = LocalDate.parse(expireDate, formatter);

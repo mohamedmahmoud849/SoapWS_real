@@ -10,10 +10,10 @@ public abstract class Handler {
         return next;
     }
 
-    public abstract boolean handle(Card card);
-    protected boolean handleNext(Card card){
+    public abstract String handle(Card card);
+    protected String handleNext(Card card){
         if(next == null) {
-            return true;
+            return "Valid";
         }
         return next.handle(card);
     }

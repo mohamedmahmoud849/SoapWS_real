@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 public class CardService {
 
-    public boolean validateCard(long cardNumber, int pin, LocalDate expireDate){
+    public String validateCard(long cardNumber, int pin, LocalDate expireDate){
         Card card = Card.builder()
                 .cardNumber(cardNumber)
                 .pin(pin)

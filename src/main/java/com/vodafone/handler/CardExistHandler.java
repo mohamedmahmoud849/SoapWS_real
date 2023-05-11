@@ -10,10 +10,9 @@ public class CardExistHandler extends Handler{
 
     private final CardRepo cardRepo;
     @Override
-    public boolean handle(Card card) {
-        if(cardRepo.findCardByNumber(card.getCardNumber()) == null) {
-            System.out.println("This Card doesn't exist.");
-            return false;
+    public String handle(Card card) {
+        if (cardRepo.findCardByNumber(card.getCardNumber()) == null) {
+            return "This Card doesn't exist.";
         }
         return handleNext(card);
     }

@@ -8,12 +8,11 @@ import lombok.RequiredArgsConstructor;
 public class PinHandler extends Handler{
     private final CardRepo cardRepo;
     @Override
-    public boolean handle(Card card){
+    public String handle(Card card){
         int pin = 0;
         pin = cardRepo.findCardByNumber(card.getCardNumber()).getPin();
         if (card.getPin() != pin) {
-            System.out.println("The Card Pin isn't correct.");
-            return false;
+            return "The Card Pin isn't correct.";
         }
         return handleNext(card);
     }
